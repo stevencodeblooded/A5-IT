@@ -11,7 +11,6 @@ import SavedItems from "./components/MyAccount/SavedItems"
 import ProfileSettings from "./components/MyAccount/ProfileSettings"
 import Address from "./components/MyAccount/Address"
 import PaymentMethod from "./components/Shipping/PaymentMethod"
-import Logout from "./components/MyAccount/Logout"
 import SingleProductScreen from "./container/SingleProductScreen"
 import BrandScreen from "./container/BrandScreen"
 import OurTeamScreen from "./container/OurTeamScreen"
@@ -20,6 +19,8 @@ import FaqScreen from "./container/FaqScreen"
 import Resources from './container/ResourcesScreen'
 import LoginScreen from "./container/LoginScreen"
 import SignupScreen from "./container/SignupScreen"
+import Logout from "./components/MyAccount/Logout"
+import NewAddress from "./container/NewAddress"
 
 const App = () => {
   const router = createBrowserRouter(
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="saved" element={<SavedItems />} />
             <Route path="profile" element={<ProfileSettings />} />
             <Route path="address" element={<Address />} />
+            <Route path="new-address" element={<NewAddress />} />
             <Route path="payment" element={<PaymentMethod />} />
             <Route path="logout" element={<Logout />} />
           </Route>

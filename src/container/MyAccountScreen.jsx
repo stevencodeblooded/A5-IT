@@ -1,7 +1,11 @@
 const MyAccountScreen = () => {
   return (
-    <div>MyAccountScreen</div>
-  )
+    <div>
+      <section>
+        <div>MyAccountScreen</div>
+      </section>
+    </div>
+  );
 }
 
 export default MyAccountScreen
