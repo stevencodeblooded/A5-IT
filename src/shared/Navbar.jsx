@@ -8,7 +8,7 @@ import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons"
 const Navbar = () => {
   return (
     <div>
-      <section className="fixed top-0 left-0 w-full z-10">
+      <section className="fixed top-0 left-0 w-full z-20">
         <div className="hidden lg:block bg-indigo-950 px-3 py-4">
           <div className="hidden lg:flex gap-1 max-w-4xl text-gray-300 justify-between mx-auto">
             <p className='text-sm font-semibold '>Connect with A5 IT for comprehensive IT solutions tailored to your business needs.</p>
