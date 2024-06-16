@@ -9,15 +9,15 @@ const LoginScreen = () => {
       <div className="flex min-h-screen max-h-screen">
         <div className="hidden lg:w-2/5 lg:block relative ">
           <img src={loginBg} alt="login" />
-          <div className='absolute top-0 left-0 text-white flex h-full items-center'>
-            <div className='flex flex-col gap-6 px-10'>
-                <h1 className="text-4xl lg:text-5xl font-semibold">
+          <div className="absolute top-0 left-0 text-white flex h-full items-center">
+            <div className="flex flex-col gap-6 px-10">
+              <h1 className="text-4xl lg:text-5xl font-semibold">
                 All your hardware needs at one place.
-                </h1>
-                <p className='font-semibold'>
+              </h1>
+              <p className="font-semibold">
                 More than 5,825,610 products available at A5 IT. Browse. Find.
                 Shop.
-                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -34,7 +34,9 @@ const LoginScreen = () => {
           </h2>
           <p className="text-gray-600  font-semibold text-center">
             Don't have an account?{" "}
-            <Link to={'/signup'} className="text-blue-600">Sign up</Link>
+            <Link to={"/signup"} className="text-blue-600">
+              Sign up
+            </Link>
           </p>
           <form className="flex flex-col gap-5 mt-12 md:w-3/4 mx-auto">
             <div className="flex flex-col gap-1">
@@ -62,9 +64,14 @@ const LoginScreen = () => {
               />
             </div>
 
-            <button className=" text-right text-sm font-semibold mb-4">
-              Forgot Password
-            </button>
+            <h3 className="text-right">
+              <Link
+                to={"/forget-password"}
+                className=" text-sm font-semibold mb-4"
+              >
+                Forgot Password
+              </Link>
+            </h3>
 
             <button className="bg-blue-600 mb-5 hover:bg-blue-700 transition-all py-3 rounded-full text-white font-semibold border-none">
               Login

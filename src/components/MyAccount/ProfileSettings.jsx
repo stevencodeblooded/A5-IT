@@ -22,9 +22,9 @@ const ProfileSettings = () => {
           </div>
         </div>
 
-        <hr className="border-t-0 border-b border-gray-300 my-5 w-2/3" />
+        <hr className="border-t-0 border-b border-gray-300 my-5 md:w-2/3" />
 
-        <form className="w-2/3 flex flex-col gap-4 font-semibold text-sm">
+        <form className="md:w-2/3 flex flex-col gap-4 font-semibold text-sm">
           <div className="flex gap-2 w-full">
             <div className="flex flex-col gap-1 w-full">
               <label htmlFor="fname">First Name</label>
@@ -70,7 +70,7 @@ const ProfileSettings = () => {
 
           <h2 className="text-lg font-semibold">Password Details</h2>
 
-          <div className="flex flex-col gap-2 w-1/2">
+          <div className="flex flex-col gap-2 md:w-1/2">
             <div className="flex flex-col gap-1 w-full">
               <label htmlFor="oPassword">Old Password</label>
               <input

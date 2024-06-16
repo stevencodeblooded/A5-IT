@@ -5,7 +5,7 @@ const AccountSidebar = () => {
     <div>
       <section>
         <nav>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-wrap mb-8 md:flex-col gap-5 md:gap-2">
             <li>
               <NavLink
                 to={"orders"}
@@ -49,7 +49,7 @@ const AccountSidebar = () => {
             <li>
               <NavLink
                 to="logout"
-                className={({ isActive }) => (isActive ? "font-semibold" : "")}
+                className={({ isActive }) => (isActive ? "font-semibold text-red-600" : "text-red-600")}
               >
                 Logout
               </NavLink>

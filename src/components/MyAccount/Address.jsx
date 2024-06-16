@@ -13,7 +13,7 @@ const Address = () => {
             Add new address
           </Link>
         </div>
-        <div className="w-3/4 flex gap-3">
+        <div className="md:w-3/4 flex flex-col sm:flex-row gap-3">
           <div className="border-2 rounded-lg p-5 hover:border-blue-800 transition-all">
             <div className="flex justify-between mb-3">
               <h3 className="font-semibold">Work</h3>

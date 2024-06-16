@@ -25,8 +25,8 @@ const YourCart = () => {
           </Link>
         </div>
 
-        <div className="flex justify-between gap-5">
-          <div className="w-3/5">
+        <div className="flex flex-col lg:flex-row justify-between gap-5">
+          <div className="lg:w-3/5">
             <div className="font-semibold flex items-center ">
               <h3 className="w-1/2">Product</h3>
               <div className="w-1/2 flex items-center justify-between">
@@ -39,7 +39,7 @@ const YourCart = () => {
             <hr className="border-t-0 border-b border-gray-300 my-5" />
 
             <div className="font-semibold flex items-center ">
-              <div className="w-2/3 flex gap-3">
+              <div className="lg:w-2/3 flex gap-3">
                 <img
                   src={bulb}
                   alt="product"
@@ -70,14 +70,14 @@ const YourCart = () => {
             <hr className="border-t-0 border-b border-gray-300 my-5" />
           </div>
 
-          <div className="w-1/3 bg-gray-100 rounded-lg p-4 flex flex-col gap-4">
+          <div className="lg:w-1/3 bg-gray-100 rounded-lg p-4 flex flex-col gap-4">
             <h2 className="text-xl font-semibold">Promotional Code</h2>
             <div className="flex gap-2">
               <input
                 type="number"
                 name="code"
                 placeholder="Enter your code"
-                className="w-2/3 px-5 py-1 rounded-md outline-none bg-gray-300"
+                className="w-2/3 px-5 py-1 rounded-full outline-none bg-gray-300"
               />
               <button className="px-6 py-2 w-1/3 rounded-full font-semibold border bg-blue-600 text-white hover:bg-blue-700 transition-all">
                 Apply

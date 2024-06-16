@@ -3,7 +3,7 @@ const NewAddress = () => {
     <div>
       <section>
         <h2 className="text-xl font-semibold mb-4">Addresses</h2>
-        <div className="w-3/4">
+        <div className="md:w-3/4">
           <form className="font-semibold text-sm flex flex-col gap-5">
             <div>
               <label htmlFor="location">Location Title</label>

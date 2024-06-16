@@ -5,11 +5,11 @@ const AccountLayout = () => {
   return (
     <div className="px-3 py-48">
       <section className="max-w-6xl mx-auto">
-        <div className="flex gap-4">
-          <div className="w-1/4">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="md:w-1/4">
             <AccountSidebar />
           </div>
-          <div className="w-3/4">
+          <div className="w-full md:w-3/4">
             <Outlet />
           </div>
         </div>

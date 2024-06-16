@@ -103,9 +103,14 @@ const SignupScreen = () => {
               />
             </div>
 
-            <button className=" text-right text-sm font-semibold mb-4">
-              Forgot Password
-            </button>
+            <h3 className=" text-right ">
+              <Link
+                to="/forget-password"
+                className="text-sm font-semibold mb-4"
+              >
+                Forgot Password
+              </Link>
+            </h3>
 
             <button className="bg-blue-600 hover:bg-blue-700 transition-all py-3 rounded-full text-white font-semibold border-none">
               Sign up

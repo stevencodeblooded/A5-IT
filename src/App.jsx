@@ -10,7 +10,7 @@ import Order from "./components/MyAccount/Order"
 import SavedItems from "./components/MyAccount/SavedItems"
 import ProfileSettings from "./components/MyAccount/ProfileSettings"
 import Address from "./components/MyAccount/Address"
-import PaymentMethod from "./components/Shipping/PaymentMethod"
+import PaymentMethod from "./components/MyAccount/PaymentMethod";
 import SingleProductScreen from "./container/SingleProductScreen"
 import BrandScreen from "./container/BrandScreen"
 import OurTeamScreen from "./container/OurTeamScreen"
@@ -21,6 +21,10 @@ import LoginScreen from "./container/LoginScreen"
 import SignupScreen from "./container/SignupScreen"
 import Logout from "./components/MyAccount/Logout"
 import NewAddress from "./container/NewAddress"
+import ForgotPassword from "./container/ForgotPassword"
+import EmailSent from "./container/EmailSent"
+import ResetPassword from "./container/ResetPassword";
+import NotFound from "./container/NotFound"
 
 const App = () => {
   const router = createBrowserRouter(
@@ -50,6 +54,10 @@ const App = () => {
           <Route path="faq" element={<FaqScreen />} />
           <Route path="resources" element={<Resources />} />
         </Route>
+        <Route path="forget-password" element={<ForgotPassword />} />
+        <Route path="email-recovery" element={<EmailSent />} />
+        <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )
