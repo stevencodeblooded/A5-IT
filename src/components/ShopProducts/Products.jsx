@@ -4,6 +4,7 @@ import Pagination from "./Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faSquare } from "@fortawesome/free-solid-svg-icons";
 
+
 const Products = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
