@@ -1,25 +1,25 @@
 const images = [
-    {
-      imgURL:
-        "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      imgAlt: "img-1"
-    },
-    {
-      imgURL:
-        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      imgAlt: "img-2"
-    },
-    {
-      imgURL:
-        "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      imgAlt: "img-3"
-    },
-    {
-      imgURL:
-        "https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      imgAlt: "img-4"
-    }
-  ];
+  {
+    imgURL:
+      "https://images.pexels.com/photos/1038628/pexels-photo-1038628.jpeg",
+    imgAlt: "img-1",
+  },
+  {
+    imgURL:
+      "https://images.pexels.com/photos/317365/pexels-photo-317365.jpeg",
+    imgAlt: "img-2",
+  },
+  {
+    imgURL:
+      "https://images.pexels.com/photos/8681887/pexels-photo-8681887.jpeg",
+    imgAlt: "img-3",
+  },
+  {
+    imgURL:
+      "https://images.pexels.com/photos/6927393/pexels-photo-6927393.jpeg",
+    imgAlt: "img-4",
+  },
+];
   
   export default images;
   
