@@ -13,7 +13,7 @@ const ProductsBrandsServicesImages = () => {
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="rounded-full md:w-1/2">
               <div className="relative">
-                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-20">
+                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-10">
                   Shop Products
                 </h1>
                 <CustomSlider>
@@ -32,7 +32,7 @@ const ProductsBrandsServicesImages = () => {
             </div>
             <div className="grid grid-cols-1 gap-4 md:w-1/2">
               <div className="relative">
-                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-20">
+                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-10">
                   Shop Brands
                 </h1>
                 <CustomSlider2>
@@ -44,7 +44,7 @@ const ProductsBrandsServicesImages = () => {
                 </CustomSlider2>
               </div>
               <div className="relative">
-                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-20">
+                <h1 className="absolute bottom-12 left-1/3 font-semibold text-white text-2xl z-10">
                   Explore Services
                 </h1>
                 <CustomSlider3>
