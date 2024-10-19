@@ -1,10 +1,18 @@
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
-import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link, NavLink } from "react-router-dom"
-import NetworkSupplierLogo from '../assets/NetworkSupplierLogo.png'
-import { faBars, faTimes, faCartShopping, faMinus, faPlus, faSearch, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { useEffect, useState } from "react"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, NavLink } from "react-router-dom";
+import NetworkSupplierLogo from "../assets/NetworkSupplierLogo.png";
+import {
+  faBars,
+  faTimes,
+  faCartShopping,
+  faMinus,
+  faPlus,
+  faSearch,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 import bulb from "../assets/bulb.png";
 
 const Navbar = () => {
@@ -24,8 +32,8 @@ const Navbar = () => {
 
   return (
     <div className="relative">
+      {/* Cart Container with Smooth Slide-In Animation */}
       <div
-        onClick={() => setDisplayCart(false)}
         className={`fixed z-50 w-screen inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${
           displayCart ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
@@ -146,7 +154,7 @@ const Navbar = () => {
             <>
               {/* Search Input Field with Smooth Slide-Down/Up Animation */}
               <div
-                className={`fixed inset-x-0 top-0 z-50 px-4 py-6 bg-white shadow-md transition-all duration-300 ease-in-out transform ${
+                className={`fixed inset-x-0 top-0 z-50 px-4 py-6 bg-white shadow-md transition-transform duration-300 ease-in-out transform ${
                   isSearchOpen
                     ? "translate-y-0 opacity-100"
                     : "-translate-y-full opacity-0"
@@ -222,107 +230,74 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Search for products"
-                  className="px-6 py-3 rounded-full bg-gray-100 focus:outline-none"
+                  className="px-6 py-3 rounded-full border-2 border-gray-200 focus:outline-none"
+                  onFocus={() => {
+                    setIsSearchOpen(true);
+                  }}
                 />
-                <Link
-                  to="login"
-                  className="text-blue-600 px-6 py-3 rounded-full hover:bg-blue-400 transition-all hover:text-white"
-                >
-                  Log in
-                </Link>
-                <Link
-                  to="signup"
-                  className="bg-blue-600 hover:bg-blue-700 transition-all px-6 py-3 rounded-full text-white font-semibold"
-                >
-                  Sign up
-                </Link>
               </div>
 
-              {/* Mobile Navbar Controls */}
-              <div className="flex items-center gap-12 lg:hidden">
-                <button onClick={() => setIsSearchOpen(true)}>
-                  <FontAwesomeIcon
-                    className="text-blue-600 text-2xl"
-                    icon={faSearch}
-                  />
-                </button>
-
-                <div
-                  className="relative cursor-pointer"
-                  onClick={() => setDisplayCart(true)}
-                >
-                  <FontAwesomeIcon
-                    icon={faCartShopping}
-                    className="text-3xl text-blue-500"
-                  />
-                  <p className="absolute bg-blue-500 py-1 px-2 text-white font-bold rounded-full -bottom-2 -right-3">
-                    4
-                  </p>
-                </div>
-
-                <button onClick={() => setIsMobileMenuOpen(true)}>
-                  <FontAwesomeIcon
-                    icon={faBars}
-                    className="text-blue-600 text-3xl"
-                  />
-                </button>
+              {/* Mobile Navbar */}
+              <div
+                className="block lg:hidden cursor-pointer"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <FontAwesomeIcon
+                  icon={isMobileMenuOpen ? faTimes : faBars}
+                  className="text-3xl text-blue-600"
+                />
               </div>
             </nav>
-          </div>
 
-          {/* Mobile Sidebar */}
-          <div
-            className={`fixed top-0 left-0 h-full w-3/4 md:w-1/2 lg:hidden bg-white shadow-lg z-50 transform ${
-              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-            } transition-transform duration-300 ease-in-out`}
-          >
-            <div className="flex items-center justify-between p-5">
-              <Link to={"/"} className="w-fit">
-                <img
-                  src={NetworkSupplierLogo}
-                  alt="Logo"
-                  className="block w-16"
-                />
-              </Link>
-              <button onClick={() => setIsMobileMenuOpen(false)}>
-                <FontAwesomeIcon
-                  icon={faTimes}
-                  className="text-2xl text-blue-600"
-                />
-              </button>
-            </div>
-            <ul className="flex flex-col items-start gap-4 px-5">
-              {["shop", "brands", "resources", "login", "signup"].map(
-                (item) => (
-                  <li key={item} className="w-full">
+            {/* Mobile Menu */}
+            <div
+              className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform duration-300 ease-in-out ${
+                isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+              }`}
+            >
+              <ul className="flex flex-col items-center">
+                {["shop", "brands", "resources"].map((item) => (
+                  <li key={item}>
                     <NavLink
                       to={item}
                       className={({ isActive }) =>
                         isActive
-                          ? "block w-full px-4 py-3 rounded bg-blue-400 text-white"
-                          : "block w-full px-4 py-3 rounded hover:bg-blue-400 transition-all hover:text-white"
+                          ? "px-6 py-3 rounded-full bg-blue-400 text-white"
+                          : "px-6 py-3 rounded-full hover:bg-blue-400 transition-all hover:text-white"
                       }
-                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
                     </NavLink>
                   </li>
-                )
-              )}
-            </ul>
+                ))}
+                <li className="mt-4">
+                  <input
+                    type="text"
+                    placeholder="Search for products"
+                    className="px-6 py-3 rounded-full border-2 border-gray-200 focus:outline-none"
+                  />
+                </li>
+                <li className="mt-4">
+                  <div
+                    className="relative cursor-pointer"
+                    onClick={() => setDisplayCart(true)}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      className="text-3xl text-blue-500"
+                    />
+                    <p className="absolute bg-blue-500 py-1 px-2 text-white font-bold rounded-full -bottom-2 -right-3">
+                      4
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          {/* Overlay when menu is open */}
-          {isMobileMenuOpen && (
-            <div
-              className="fixed lg:hidden inset-0 bg-black bg-opacity-50 z-40"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-          )}
         </div>
       </section>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

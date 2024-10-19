@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="max-w-6xl mx-auto w-full">
               <div className="flex flex-col items-start justify-center min-h-screen">
                 <div className="flex flex-col gap-12 md:w-2/3 lg:w-1/2">
-                  <h1 className="text-4xl leading-snug font-semibold text-gray-800">
+                  <h1 className="text-4xl lg:mt-48 leading-snug font-semibold text-gray-800">
                     Fulfilling all your Hardware, Software and Service Needs at
                     your finger tips
                   </h1>
@@ -68,7 +68,7 @@ const Hero = () => {
             <div className="max-w-6xl mx-auto w-full">
               <div className="flex flex-col items-start justify-center min-h-screen">
                 <div className="flex flex-col gap-12 md:w-2/3 lg:w-1/2">
-                  <h1 className="text-4xl leading-snug font-semibold text-gray-800">
+                  <h1 className="text-4xl lg:mt-48 leading-snug font-semibold text-gray-800">
                     Expert Support and Solutions Tailored to Your Business
                     Requirements.
                   </h1>
@@ -103,7 +103,7 @@ const Hero = () => {
             <div className="max-w-6xl mx-auto w-full">
               <div className="flex flex-col items-start justify-center min-h-screen">
                 <div className="flex flex-col gap-12 md:w-2/3 lg:w-1/2">
-                  <h1 className="text-4xl leading-snug font-semibold text-gray-800">
+                  <h1 className="text-4xl lg:mt-48 leading-snug font-semibold text-gray-800">
                     Seamless Integration and Maintenance for Your Entire Network
                     Infrastructure.
                   </h1>

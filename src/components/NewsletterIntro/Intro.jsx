@@ -22,6 +22,7 @@ const Intro = () => {
               <input
                 type="email"
                 name="email"
+                placeholder='Enter your email address'
                 className="px-5 py-3 rounded-full border border-gray-300 outline-none"
               />
               <button className="md:w-fit bg-blue-600 hover:bg-blue-700 transition-all px-8 py-3 rounded-full text-white font-semibold border-none">
